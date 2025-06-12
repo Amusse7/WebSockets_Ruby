@@ -4,7 +4,8 @@ require_relative './lib/http_res'
 require_relative './lib/router'
 require_relative './lib/logger'
 
-server = TCPServer.new('localhost', 3000)
+server = TCPServer.new('0.0.0.0', 3000)
+
 puts "Listening on port 3000..."
 
 loop do
