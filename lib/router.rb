@@ -10,6 +10,10 @@ class Router
       serve_file('about.html')
     when '/api/time'
       serve_json({time: Time.now})
+    when "/api/hello"
+      serve_json({ message: "Hello from Ruby HTTP Server!" })
+    when "/api/random"
+      serve_json({ number: rand(1..100) })
     else
       serve_file('404.html', 404)
     end
